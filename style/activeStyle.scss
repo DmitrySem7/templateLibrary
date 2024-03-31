@@ -1,0 +1,60 @@
+@import "../style/setStyle/CiscoStyleMixin";
+.app{
+    //font-family: "Cisco Sans Thin";
+    font-family: 'Cisco Sans';
+    @include ciscoApp;
+}
+.text{
+    @include ciscoText;
+}
+.header1{
+    @include ciscoHeader1Block;
+}
+.header2{
+    @include ciscoHeader2Block;
+}
+.header1LinkSpan{
+    @include ciscoHeader1LinkSpan;
+}
+.header2LinkSpan{
+    @include ciscoHeader2LinkSpan;
+}
+.header2LinkButton{
+    @include ciscoHeader1LinkButton;
+}
+.header2Inside1{
+    @include CiscoHeader2Inside1;
+}
+.header2Inside2{
+    @include CiscoHeader2Inside2;
+}
+.posterCard{
+    @include CiscoPosterCard;
+}
+.quickTasks{
+    @include ciscoQuickTasks;
+}
+.aLink{
+    @include ciscoALink;
+}
+.bodyMosaic{
+    @include bodyMosaic;
+}
+.containerRowOf3TextCardWithLink{
+    @include CiscoContainerRowOf3TextCardWithLink;
+}
+.containerRowOf3UpperImgCards{
+    @include CiscoContainerRowOf3UpperImgCards;
+}
+.cardsWithUpperImg{
+    @include CiscoCardsWithUpperImg;
+}
+.cardSpanLink{
+    @include CiscoCardSpanLink;
+}
+body{
+    background-color: rgb(242, 242, 242);
+    padding: 0px;
+    margin: 0px;
+    border: 0;
+}

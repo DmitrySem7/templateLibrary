@@ -1,0 +1,300 @@
+$cisco-fonts: "Cisco Sans";
+$ciscoUrlCiscoSanc: url("../font/CiscoSans.ttf");
+$cisco-fonts-Thin: "Cisco Sans Thin";
+$ciscoUrlCiscoSancThin: url("../font/CiscoSans-Thin.ttf");
+$cisco-fonts-Light: "CiscoSansTT Light";
+@import "../style/font/stylesheet.css";
+@import "./indentation.scss";
+
+@mixin ciscoApp{
+  @media (max-width:2300px) and (min-width:1400px) {
+    margin-right: calc((100vw - 300px) * (0 - 37) / (700 -  1000));
+    margin-left: calc((100vw - 300px) * (0 - 37) / (700 -  1000));
+  };
+  border: 1px solid rgb(230, 230, 230);
+  //box-shadow: 10px 0 8px -8px rgb(230, 230, 230);
+  box-shadow: -5px 0 10px 5px rgba(230, 230, 230, .5);
+  display: grid;
+  grid-template-areas: "header1"
+  "header2"
+  "body"
+  "footer1"
+;
+
+}
+
+@mixin ciscoHeader1Block{
+  background-color: rgb(244, 245, 246);
+  grid-auto-flow: column;
+  grid-area: header1;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+@mixin ciscoHeader2Block{
+  background-color: rgb(255, 255, 255);
+  grid-area: header2;
+  padding: 12px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@mixin ciscoTextLight{
+  font-size: 16px;
+  font-family: $cisco-fonts-Light;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+@mixin ciscoText{
+  font-size: 16px;
+  font-family: $cisco-fonts;
+  line-height: 24px;
+}
+@mixin ciscoTitleCard{
+  font-size: 20px;
+  font-family: $cisco-fonts-Light;
+  line-height: 28px
+}
+
+@mixin ciscoText14px{
+  font-size: 14px;
+  font-family: $cisco-fonts;
+}
+
+@mixin ciscoSmallText{
+  font-size: 12px;
+  font-weight: 400;
+  font-family: $cisco-fonts;
+}
+
+@mixin ciscoPresentTitle{
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 62px;
+}
+@mixin ciscoTitle{
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  font-family: $cisco-fonts;
+}
+
+@mixin ciscoHeader1LinkButton{
+  display: flex;
+        button{
+          cursor: pointer;
+          border: none;
+          background-color: rgb(255, 255, 255);
+          padding-right: 30px;
+          @include ciscoText14px;
+        }
+        :hover button{
+          text-decoration: underline;
+        }
+
+}
+
+@mixin ciscoHeader1LinkSpan{
+  font-size: 12px;
+  padding: 8px;
+  span{
+    padding-right: 30px;
+    @include ciscoSmallText;
+    line-height:12px;
+  }
+}
+
+@mixin ciscoALink{
+    color:rgb(27, 28, 29);
+    text-decoration: none;
+  font-weight: 500;
+  @include ciscoText;
+
+}
+
+@mixin underlining{
+  text-decoration: underline;
+}
+
+@mixin ciscoHeader2LinkSpan{
+  padding: 8px;
+  span{
+    padding-right: 30px;
+    @include ciscoText14px;
+    line-height:12px;
+  }
+}
+
+@mixin CiscoHeader2Inside1{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  img{
+    width: 85.25px;
+    height: 45px;
+  }
+}
+
+@mixin CiscoHeader2Inside2{
+  display: flex;
+  align-items: center;
+  margin-right: 0px;
+  margin-left: auto;
+  img{
+    margin-left: 5px;
+    margin-bottom: -3px;
+  }
+}
+
+@mixin CiscoPosterCard{
+  .posterTextBlock{
+    padding: 64px 80px 48px 80px;
+  }
+  .posterTitle{
+    margin-bottom: 12px;
+    @include ciscoPresentTitle;
+  }
+  .posterText{
+    @include ciscoTextLight;
+  }
+  .posterLinkBlock{
+    //padding: 18px 34px 18px 34px;
+    padding-top: 15px;
+    gap: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button{
+      cursor: pointer;
+      font-weight: 500;
+      background-color: rgb(13, 39, 77);
+      color:rgb(255, 255, 255);
+      @include ciscoText;
+      border-radius: 48px;
+      border-right-width: 2px;
+      border-bottom-width: 2px;
+      border-left-width: 2px;
+      border-top-width: 2px;
+      line-height: 24px;
+      padding: 16px 32px;
+    }
+    :active button{
+      outline: 4px solid cornflowerblue;
+
+    }
+    :hover span{
+      border-bottom: 1px black solid;
+      //  text-decoration: underline;
+    }
+    :active span{
+      padding: 2px 4px;
+      outline: 3px solid cornflowerblue;
+      border-radius: 8px;
+    }
+    span{
+      cursor: pointer;
+      color: rgb(13, 39, 77);
+      font-weight: 500;
+      @include ciscoText;
+    }
+  }
+
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  img{
+    width: 100%;
+  }
+}
+
+@mixin ciscoQuickTasks{
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgb(255, 255, 255);
+  //border-top: 1px rgb(167, 173, 179) solid;
+  border-top: 1px rgb(190, 193, 196) solid;
+  text-align: center;
+  flex-wrap: wrap;
+  :hover div{
+    @include underlining;
+  }
+
+}
+
+@mixin bodyMosaic{
+  background-color:rgb(255, 255, 255);
+  .Title{
+    padding-top: 2vmin;
+    @include ciscoTitle;
+    text-align: center;
+  }
+}
+
+@mixin CiscoContainerRowOf3TextCardWithLink{
+}
+
+@mixin CiscoContainerRowOf3UpperImgCards{
+  display: grid;
+  @include CiscoStandardPresentIndentCardContainer;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 24px;
+  justify-content: center;
+  img{
+    max-width:100%;
+    height:auto;
+  }
+}
+
+@mixin CiscoCardsWithUpperImg{
+  border: 1px solid rgb(247,248,250);
+  box-shadow:
+          -2px 0 10px 2px rgba(242,243,245, 1),
+           2px 0px 10px 2px rgba(242,243,245, 1),
+  ;
+
+  .cardTextContainer{
+    @include cardTextLittleIndent;
+    .cardTitle{
+      @include ciscoTitleCard;
+    }
+    .cardText{
+      padding-top: 1vmin;
+      @include ciscoTextLight;
+    }
+    .cardSpanLink{
+      padding-top: 2vmin;
+      color: rgb(0, 112, 210);
+      @include ciscoText;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .cardSpanLink span:hover{
+      border-bottom: 1px solid rgb(0, 112, 210);
+    }
+    .cardSpanLink span:active{
+      padding: 2px 4px;
+      outline: 3px solid rgb(0, 112, 210);
+      border-radius: 8px;
+    }
+    .cardSpanLink span::after{
+      padding-left: 1vmin;
+      content: url("/cisco/icon/right_arrow.svg");
+    }
+    .cardSpanLink span:hover::after{
+      padding-left: 2vmin;
+      content: url("/cisco/icon/right_arrow.svg");
+    }
+  }
+}
+@mixin CiscoCardSpanLink{
+
+}
+
+@mixin ciscoSpanLink{
+
+}
