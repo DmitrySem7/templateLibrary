@@ -1,11 +1,11 @@
 import {CardWithLink} from "../card/defaultCardWith_link";
 import {Fragment} from "react";
 
-export const Right_Image_and_Text_Block = ({title,text,link,img})=>{
+export const Right_Image_and_Text_Block = ({title,text,link,linkButton,img})=>{
     return(
-        <div>
+        <div className="Right_Image_and_Text_Block">
             <div>
-                <CardWithLink props = {{title,text,link}}/>
+                <CardWithLink props = {{title,text,link,linkButton}}/>
             </div>
             <div>
                 {img ? <img src={img} alt="Картинка"/> : null}

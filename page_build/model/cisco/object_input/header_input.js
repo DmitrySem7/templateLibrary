@@ -70,10 +70,11 @@ const ciscoMosaic = [
         text:null,
         blocks:[
             {
-                title:'Connecting and protecting Super Bowl LVIII',
-                text:"Every day is game day for the National Football League. That's why the NFL relies on Cisco to connect and protect its teams, stadiums and events, including Super Bowl LVIII.",
-                link:["Explore partnership","onclick func"],
-                img:"img simple"
+                title:'Go Beyond at Cisco Live 2024',
+                text:"Join us June 2–6 in Las Vegas as AI takes center stage.",
+                link:null,
+                linkButton:["Register today","onclick func"],
+                img:"cisco/image/imgTextBlock1.webp"
             }
         ]
     },
@@ -83,13 +84,29 @@ const ciscoMosaic = [
         text:null,
         blocks:[
             {
-                title:'The power of purpose ',
-                text:"We combine our technology, people, and broader networks to address society's greatest challenges. Since FY16, Cisco has made a positive impact on more than 1 billion lives.",
-                link:["Read FY23 Purpose Report (PDF)","onclick func"],
-                img:"img simple"
+                title:'See your IT from a better place',
+                text:"When your apps and infrastructure work better together, you work better.",
+                link:["Explore observability","onclick func"],
+                linkButton:["Discover more","onclick func"],
+                img:"cisco/image/imgTextBlock2.avif"
             }
         ]
-    }
+    },
+    {
+        typeContent:"Left_Image_and_Text_Block",
+        title:null,
+        text:null,
+        blocks:[
+            {
+                title:'Marriott makes the internet safer with Cisco',
+                text:"In nearly 5000 properties in its portfolio throughout the United States and Canada, Marriott uses Cisco Umbrella in a first-of-its-kind initiative to block guest network access to online child sexual abuse materials (CSAM).",
+                linkButton:["Read full story","onclick func"],
+                link:["Explore security solutions","onclick func"],
+                img:"cisco/image/imgTextBlock3.avif"
+            }
+        ]
+    },
+
 ]
 const ciscoDemo = {
     title:"Stopping attackers is simpler than ever",

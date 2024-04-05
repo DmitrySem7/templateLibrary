@@ -1,6 +1,6 @@
 export const Title = ({text})=>{
     return(
-        <div>
+        <div className="Title">
             {text}
         </div>
     )

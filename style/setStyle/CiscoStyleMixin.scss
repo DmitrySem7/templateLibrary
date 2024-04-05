@@ -250,6 +250,30 @@ $cisco-fonts-Light: "CiscoSansTT Light";
   }
 }
 
+@mixin CiscoSpanLinkCSS{
+  span{
+    color: rgb(0, 112, 210);
+    @include ciscoText;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  span:hover{
+    border-bottom: 1px solid rgb(0, 112, 210);
+  }
+  span:active{
+    padding: 2px 4px;
+    outline: 3px solid rgb(0, 112, 210);
+    border-radius: 8px;
+  }
+  span::after{
+    padding-left: 1vmin;
+    content: url("/cisco/icon/right_arrow.svg");
+  }
+  span:hover::after{
+    padding-left: 2vmin;
+    content: url("/cisco/icon/right_arrow.svg");
+  }
+}
 @mixin CiscoCardsWithUpperImg{
   border: 1px solid rgb(247,248,250);
   box-shadow:
@@ -291,6 +315,97 @@ $cisco-fonts-Light: "CiscoSansTT Light";
     }
   }
 }
+
+@mixin ciscoTextBlockButton{
+  button{
+    cursor: pointer;
+    font-weight: 500;
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 112, 210);
+    @include ciscoText;
+    border-color: rgb(0, 112, 210);
+    border-radius: 48px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-width: 2px;
+    line-height: 24px;
+    padding: 16px 32px;
+  }
+  :active button{
+    outline: 4px solid cornflowerblue;
+  }
+}
+
+@mixin CiscoLeft_Image_and_Text_Block{
+  @include CiscoStandardPresentIndentCardContainer;
+  display: grid;
+  column-gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  img{
+    max-width:100%;
+    height:auto;
+  }
+  .TextBlock{
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .Title{
+    @include ciscoTitle;
+  }
+  .Text{
+    @include ciscoTextLight;
+    padding-top: 12px;
+  }
+  .Link{
+    @include CiscoSpanLinkCSS;
+    span{
+      font-weight: 400;
+    }
+    padding-top: 3vmin;
+    align-items: center;
+    @include ciscoTextBlockButton;
+    display: flex;
+    gap: 30px;
+  }
+}
+
+@mixin CiscoDemo{
+  @include CiscoStandardPresentIndentCardContainer;
+  background-color: white;
+  text-align: center;
+  .Title{
+    @include ciscoTitle;
+  }
+  .Text{
+    @include ciscoTextLight;
+    padding-top: 12px;
+    padding-bottom: 4vmin;
+  }
+  .ReactPlayerBlock{
+    display: flex;
+    justify-content: center;
+  }
+}
+@mixin CiscoIntegrationBlock{
+  background-color: white;
+  .CiscoTitleAndBreadcrumbs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .Title{
+      @include ciscoTitle;
+    }
+    .Breadcrumbs{
+      @include CiscoSpanLinkCSS;
+    }
+  }
+}
+
+@mixin CiscoRight_Image_and_Text_Block{
+  @include CiscoLeft_Image_and_Text_Block;
+}
+
 @mixin CiscoCardSpanLink{
 
 }

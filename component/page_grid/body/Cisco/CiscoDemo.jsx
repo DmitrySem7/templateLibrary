@@ -4,10 +4,12 @@ import {ciscoDemo} from "../../../../page_build/model/cisco/object_input/header_
 
 export const CiscoDemo = ({ciscoDemo})=>{
     let {title,text,url}=ciscoDemo;
+    let width = '900px';
+    let height = '550px'
     return(
-        <div>
+        <div className="media">
             <TitleAndText props = {{title,text}}/>
-            <VideoPlayer props = {{url}} />
+            <VideoPlayer props = {{url,width,height}} />
         </div>
     )
 }

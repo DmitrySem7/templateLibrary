@@ -5,9 +5,9 @@ import {DisplaySwitch} from "../../../../displayLogic/displaySwitches/default_sw
 export const CiscoIntegrations = ({ciscoIntegrations})=>{
     let {typeContent,blocks} = ciscoIntegrations;
     return(
-        <>
+        <div className="integrationBlock">
             <CiscoTitleAndBreadcrumbs {...ciscoIntegrations}/>
             {DisplaySwitch({typeContent,blocks})}
-        </>
+        </div>
     )
 }

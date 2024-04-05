@@ -52,9 +52,29 @@
 .cardSpanLink{
     @include CiscoCardSpanLink;
 }
+.Left_Image_and_Text_Block{
+    @include CiscoLeft_Image_and_Text_Block;
+}
+.Right_Image_and_Text_Block{
+    @include CiscoRight_Image_and_Text_Block;
+}
+.media{
+    @include CiscoDemo;
+}
+.integrationBlock{
+    @include CiscoIntegrationBlock;
+}
+
+
+
+
+
+
+
 body{
     background-color: rgb(242, 242, 242);
     padding: 0px;
     margin: 0px;
     border: 0;
+    word-break: break-all;
 }

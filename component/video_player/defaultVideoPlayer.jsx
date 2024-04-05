@@ -1,15 +1,16 @@
 import ReactPlayer from "react-player";
+import comparisonState from "./defaultState.js";
 
 export const VideoPlayer = (props)=>{
     debugger;
-    let {url} = props.props;
+    let {url,width,height,playing,muted,controls}=comparisonState(props.props);
     return(
-        <div>
-            <ReactPlayer width={'100%'} height='100%'
+        <div className="ReactPlayerBlock">
+            <ReactPlayer width={width} height={height}
                          url={url}
-                         playing={true}
-                         muted={true}
-                         controls={true}
+                         playing={playing}
+                         muted={muted}
+                         controls={controls}
             />
         </div>
     )
