@@ -223,6 +223,9 @@ $cisco-fonts-Light: "CiscoSansTT Light";
   :hover div{
     @include underlining;
   }
+  .aLink{
+    @include ciscoALink;
+  }
 
 }
 
@@ -390,6 +393,7 @@ $cisco-fonts-Light: "CiscoSansTT Light";
 }
 @mixin CiscoIntegrationBlock{
   background-color: white;
+  @include CiscoStandardPresentIndentCardContainer;
   .CiscoTitleAndBreadcrumbs{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -397,7 +401,11 @@ $cisco-fonts-Light: "CiscoSansTT Light";
       @include ciscoTitle;
     }
     .Breadcrumbs{
+      text-align:right;
       @include CiscoSpanLinkCSS;
+      span{
+        margin-left: 1vmin;
+      }
     }
   }
 }
@@ -405,6 +413,92 @@ $cisco-fonts-Light: "CiscoSansTT Light";
 @mixin CiscoRight_Image_and_Text_Block{
   @include CiscoLeft_Image_and_Text_Block;
 }
+
+@mixin CiscoContainerRowOf3TextCardWithLink{
+
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin-top:4vmin;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3vmin;
+  @include ciscoTextLight;
+  .PreTitle{
+    font-weight: 700;
+  }
+  .Title{
+    margin-top: 1vmin;
+    font-size: 20px;
+  }
+  .Text{
+    margin-top: 1vmin;
+  }
+  .Link{
+    margin-top: 1vmin;
+    @include CiscoSpanLinkCSS;
+  }
+
+}
+
+
+@mixin CiscoContainerContactFooter{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color:rgb(96, 97, 98);
+  font-size: 16px;
+  .ListAT{
+    a{
+      color:rgb(96, 97, 98);
+      text-decoration: none;
+      font-weight: 500;
+      @include ciscoTextLight;
+      font-size: 14px;
+    }
+    a:hover{
+      @include underlining;
+    }
+    display: flex;
+    gap: 1vmin;
+  }
+}
+
+@mixin CiscoFooterPolicy{
+  hr{
+    border: none; /* Убираем границу для браузера Firefox */
+    color: rgb(230, 231, 232); /* Цвет линии для остальных браузеров */
+    background-color: rgb(230, 231, 232); /* Цвет линии для браузера Firefox и Opera */
+    height: 1px; /* Толщина линии */
+  }
+  padding: 12px 60px;
+  .PoliciesSupportFooter{
+    margin-top: 15px;
+    .containerPoliciesSupportFooter{
+      display: flex;
+      gap: 3vmin;
+      a{
+        color:rgb(96, 97, 98);
+        text-decoration: none;
+        font-weight: 500;
+        @include ciscoTextLight;
+        font-size: 12px;
+      }
+      a:hover{
+        @include underlining;
+      }
+    }
+    .copyRight{
+      margin-top: 5vmin;
+      @include ciscoTextLight;
+      color:rgb(96, 97, 98);
+      font-size: 12px;
+    }
+  }
+  
+}
+
 
 @mixin CiscoCardSpanLink{
 

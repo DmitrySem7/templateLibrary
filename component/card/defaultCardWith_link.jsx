@@ -5,7 +5,7 @@ import {CiscoButtonLink} from "../click_block/button/CiscoButtonLink.jsx";
 export const CardWithLink = (props) =>{
     let {preTitle,title,text,link,linkButton} = props.props;
     return(
-        <Fragment>
+        <div>
             <div className="PreTitle">
                 {preTitle ? preTitle : null}
             </div>
@@ -19,6 +19,6 @@ export const CardWithLink = (props) =>{
                 {linkButton ? <CiscoButtonLink text={linkButton[0]} func={linkButton[0]}/> : null}
                 {link ? <CiscoSpanLink text={link[0]} func={link[1]}/> : null}
             </div>
-        </Fragment>
+        </div>
     )
 }

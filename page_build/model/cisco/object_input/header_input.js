@@ -115,7 +115,7 @@ const ciscoDemo = {
 }
 const ciscoIntegrations = {
     title:"Inside Cisco",
-    breadcrumbs:["1","2"],
+    breadcrumbs:["More News","More Events"],
     typeContent:"ThreeGridTextCard",
     blocks:[
         [
@@ -158,7 +158,6 @@ const ciscoFooter = {
     },
     policiesSupportFooter:{
         linkA:[
-            ["About Cisco","onclick func"],
             ["Feedback","onclick func"],
             ["Help","onclick func"],
             ["Terms & Conditions","onclick func"],

@@ -1,7 +1,7 @@
 export const Breadcrumbs = ({breadcrumbs})=>{
     return(
         <div className="Breadcrumbs">
-            {breadcrumbs.join(' > ')}
+            {breadcrumbs.map(item=><span>{item}</span>)}
         </div>
     )
 }

@@ -4,13 +4,13 @@ import {Fragment} from "react";
 export const PoliciesSupportFooter = (props)=>{
     let {linkA,copyRight} = props.props;
     return(
-        <Fragment>
-        <div>
-            <div>{linkA.map(item=><CiscoALink text={item[0]} func={item[1]}/>)}</div>
+        <div className="PoliciesSupportFooter">
+        <div className="containerPoliciesSupportFooter">
+            {linkA.map(item=><CiscoALink text={item[0]} func={item[1]}/>)}
         </div>
-         <div>
+         <div className="copyRight">
              {copyRight}
          </div>
-        </Fragment>
+        </div>
     )
 }

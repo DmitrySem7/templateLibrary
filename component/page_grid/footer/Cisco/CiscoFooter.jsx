@@ -3,10 +3,13 @@ import {ContactFooter} from "../standard/ContactFooter";
 import {ciscoFooter} from "../../../../page_build/model/cisco/object_input/header_input";
 
 export const CiscoFooter = ({ciscoFooter}) =>{
+    const divStyle = {
 
-    return(
+    };
+    return(  
     <footer>
         <ContactFooter props={ciscoFooter.contactFooter}/>
+        <hr style={divStyle}/>
         <PoliciesSupportFooter props={ciscoFooter.policiesSupportFooter}/>
     </footer>
     )
